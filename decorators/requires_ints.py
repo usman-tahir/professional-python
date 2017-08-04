@@ -1,5 +1,7 @@
+import functools
 
 def requires_ints(decorated):
+    @functools.wraps(decorated)
     def inner(*args, **kwargs):
         # Get any value that may have been sent as keyword arguments
         kwarg_values = [i for i in kwards.values()]
