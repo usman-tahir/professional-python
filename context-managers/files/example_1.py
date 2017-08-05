@@ -1,8 +1,5 @@
 
-# Basic example for opening/closing a file
-try:
-    f = open('./sample.txt', 'r')
-    contents = f.read()
+# Context manager for file operations
+with open('./sample.txt') as input_file:
+    contents = input_file.read()
     print(contents)
-finally:
-    f.close()
